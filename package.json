@@ -38,7 +38,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "axios": "^0.19.1",
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "classnames": "2.2.6",
     "headroom.js": "0.9.4",

@@ -10,6 +10,7 @@ import {
   Spinner
 } from "reactstrap";
 import { connect } from 'react-redux'
+import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
 function Filter({ suggestion ,Categoryes}) {
   const RenderFerterTag = ()=>{
     if(suggestion.length > 0){
@@ -45,6 +46,7 @@ function Filter({ suggestion ,Categoryes}) {
           <Col className="col-md-12 filter-tag-search">
             {RenderFerterTag()}
           </Col>
+            <Vehicle />
           <div className="description-filter-search">
             <span>
             رادمانی شو سمنان - نیازمندی‌ های رایگان، آگهی‌های خرید، فروش نو و دست

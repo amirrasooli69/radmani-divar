@@ -81,5 +81,14 @@ const router =[
          mainMenu: true,
           parentRoute: "/",
      },
+     {
+        path: `/vehicle`,
+        name: "وسیله نقلیه",
+        component: SingelAdvertis,
+        menuPosition: "mainMenu",
+        render: true,
+        mainMenu: true,
+         parentRoute: "/",
+    },
 ]
 export default router;

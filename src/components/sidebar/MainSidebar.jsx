@@ -13,6 +13,7 @@ import {
  } from "reactstrap";
  import Select from "react-select";
 import { Link } from "react-router-dom";
+import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
 
 export default function MainSidebar() {
     return (
@@ -22,13 +23,14 @@ export default function MainSidebar() {
             <Col>
               <h4 className="filter-category-title">دسته بندی</h4>
               <ul className="filter-category-list">
+
                 <li className="filter-category-list__item">
                   <i className="fa fa-home mr-2" />
                   <Link to=" ">املاک</Link>
                 </li>
                 <li className="filter-category-list__item">
                   <i className="fa fa-car mr-2" />
-                  <Link to="">وسایل نقلیه</Link>
+                  <Link to='/vehicle'>وسایل نقلیه</Link>
                 </li>
                 <li className="filter-category-list__item">
                   <i className="fa fa-mobile mr-2" />
