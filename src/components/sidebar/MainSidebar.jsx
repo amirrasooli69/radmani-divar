@@ -12,11 +12,13 @@ import {
     Input,
  } from "reactstrap";
  import Select from "react-select";
-import { Link } from "react-router-dom";
+import { Link , Route} from "react-router-dom";
 import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
+import ElectronicTools from 'components/Advertising/typeAdvertis/ElectronicTools';
 
 export default function MainSidebar() {
     return (
+      <div>
       <section id="main-sidebar">
         <Container>
           <Row>
@@ -34,7 +36,7 @@ export default function MainSidebar() {
                 </li>
                 <li className="filter-category-list__item">
                   <i className="fa fa-mobile mr-2" />
-                  <Link to="#">لوازم الکترونیکی</Link>
+                  <Link to="/electronictools">لوازم الکترونیکی</Link>
                 </li>
                 <li className="filter-category-list__item">
                   <i className="fa fa-bed mr-2" />
@@ -145,5 +147,8 @@ export default function MainSidebar() {
           </Row>
         </Container>
       </section>
+
+
+      </div>
     );
 }

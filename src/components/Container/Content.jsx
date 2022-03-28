@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link, Route} from 'react-router-dom';
 import {
   Button,
   UncontrolledCollapse,
@@ -19,15 +20,20 @@ import {
 } from "reactstrap";
 import Filter from './Filter';
 import PostContainer from './PostContainer';
+import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
+import ElectronicTools from 'components/Advertising/typeAdvertis/ElectronicTools';
 
 
 export default function Content() {
     return (
-      <section className="content-all">
-        <Container>
-          <Filter />
-          <PostContainer/>
-        </Container>
-      </section>
+      <div>
+        
+          <section className="content-all">
+            <Container>
+              <Filter />
+              <PostContainer/>
+            </Container>
+          </section>
+      </div>
     );
 }

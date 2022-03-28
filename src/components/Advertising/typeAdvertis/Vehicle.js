@@ -1,25 +1,40 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 
+import './vehicleStyle.css';
+
 const Vehicle = () => {
 
-    const ostan = 'https://radmanisho.ir/api/items/state';
+    // const ostan = 'https://radmanisho.ir/api/items/state';
+    const fake = 'https://fakestoreapi.com/products';
 
     // const [categories , setCategories] = useState([]);
     const [vehicle , setVehicle] = useState([]);
 
     useEffect (() => {
 
-        axios.get(ostan)
+        axios.get(fake)
         .then(response => setVehicle(response.data));
 
     } , [])
 
+
     return (
         <div>
-            <h1>Vehicles:</h1>
+            <text className='vehicleTitle'>وسیله نقلیه</text>
             <div>
-            {vehicle.map((cat, i) => ( <button key={i} className="city-Selection-btn">{cat.name}</button>))}
+            {
+                vehicle.map((item, i) => (
+                    <div className='carContainer'>
+                        <img src={item.image} alt="vehicle" className='image'/>
+                        <h5>{item.title}</h5>
+                        {/* <p>{item.description}</p> */}
+                        <h3>{item.price} $</h3>
+
+                        {/* <button key={i} className="city-Selection-btn">{cat.name}</button> */}
+                    </div>
+                    ))
+            }
 
             </div>
             

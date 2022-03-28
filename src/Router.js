@@ -6,6 +6,8 @@ import NewAdvertising from "components/Advertising/newAdvertis/NewAdvertising";
 import Weblog from "components/blog/Weblog";
 import Support from "components/Support/Support";
 import SingelAdvertis from "components/Advertising/view/SingelAdvertis";
+import Vehicle from "components/Advertising/typeAdvertis/Vehicle";
+import ElectronicTools from "components/Advertising/typeAdvertis/ElectronicTools";
 
 const router =[
      {
@@ -84,11 +86,20 @@ const router =[
      {
         path: `/vehicle`,
         name: "وسیله نقلیه",
-        component: SingelAdvertis,
+        component: Vehicle,
         menuPosition: "mainMenu",
         render: true,
         mainMenu: true,
-         parentRoute: "/",
+         parentRoute: '/',
+    },
+    {
+        path: `/electronictools`,
+        name: "لوازم الکترونیکی",
+        component: ElectronicTools,
+        menuPosition: "mainMenu",
+        render: true,
+        mainMenu: true,
+         parentRoute: '/',
     },
 ]
 export default router;

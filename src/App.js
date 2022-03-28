@@ -6,6 +6,7 @@ import Wrapper from "components/wrapper";
 import NotFound from "components/Error/NotFound";
 import Axios from 'axios';
 import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
+import ElectronicTools from 'components/Advertising/typeAdvertis/ElectronicTools';
 function App({
     fetchAdvertise,
     fetchCategories,
@@ -50,8 +51,10 @@ function App({
             <BrowserRouter>
                 <Switch>
                 <Redirect from='https://radmanisho.ir/radman/requirements/site/' Link='https://radmanisho.ir/' />
-                <Route path='/vehicle' component={Vehicle} />
                 <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / >
+                <Route path='/vehicle' component={Vehicle} /> 
+                <Route path='/electronictools' component={ElectronicTools} />
+
                 </Switch>
             </BrowserRouter>
         </>

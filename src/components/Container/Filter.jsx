@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 import { connect } from 'react-redux'
 import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
+
 function Filter({ suggestion ,Categoryes}) {
   const RenderFerterTag = ()=>{
     if(suggestion.length > 0){
@@ -29,6 +30,7 @@ function Filter({ suggestion ,Categoryes}) {
   }
     return (
       <section className="filter-search">
+        
         <Container>
           <div className="col-md-10">
             <InputGroup className="input-group-filter">
@@ -44,7 +46,7 @@ function Filter({ suggestion ,Categoryes}) {
             </InputGroup>
           </div>
           <Col className="col-md-12 filter-tag-search">
-            {RenderFerterTag()}
+            {/* {RenderFerterTag()} */}
           </Col>
             <Vehicle />
           <div className="description-filter-search">
