@@ -64,18 +64,18 @@ const advertisingDataWorker = function* (action) {
         } else {
 
             switch (true) {
-                // case result.status === 401:
-                //     yield put({
-                //         type: "FETCH_ADVERTISING_DATA_UNAUTHORIZED",
-                //         payload: result,
-                //     });
-                //     break;
-                // case result.status === 404:
-                //     yield put({
-                //         type: "FETCH_ADVERTISING_DATA_NOTFOUND",
-                //         payload: result,
-                //     });
-                //     break;
+                case result.status === 401:
+                    yield put({
+                        type: "FETCH_ADVERTISING_DATA_UNAUTHORIZED",
+                        payload: result,
+                    });
+                    break;
+                case result.status === 404:
+                    yield put({
+                        type: "FETCH_ADVERTISING_DATA_NOTFOUND",
+                        payload: result,
+                    });
+                    break;
 
                 default:
                     yield put({
