@@ -7,6 +7,13 @@ import NotFound from "components/Error/NotFound";
 import Axios from 'axios';
 import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
 import ElectronicTools from 'components/Advertising/typeAdvertis/ElectronicTools';
+import Chat from 'components/chatComponent/Chat';
+import About from 'components/page/About';
+import Weblog from 'components/blog/Weblog';
+import Support from 'components/Support/Support';
+import Contact from 'components/page/contact';
+import New from 'components/Advertising/newAdvertis/NewAdvertising'
+
 function App({
     fetchAdvertise,
     fetchCategories,
@@ -53,6 +60,12 @@ function App({
                 <Redirect from='https://radmanisho.ir/radman/requirements/site/' Link='https://radmanisho.ir/' />
                 <Route path='/vehicle' component={Vehicle} /> 
                 <Route path='/electronictools' component={ElectronicTools} />
+                <Route path='/chat' component={Chat} />
+                <Route path='/about' component={About} />
+                <Route path='/blog' component={Weblog} />
+                <Route path='/support' component={Support} />
+                <Route path='/contact' component={Contact} />
+                <Route path='/new' component={New} />
                 <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / >
 
                 </Switch>

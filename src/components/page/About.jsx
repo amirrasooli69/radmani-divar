@@ -11,10 +11,14 @@ import {
   Card
 } from "reactstrap";
 import Footer from 'components/Footers/Footer';
+import DemoNavbar from 'components/Navbars/DemoNavbar'
+
 
 export default function About() {
     return (
+      
       <section className="section-about-us">
+        <DemoNavbar />
         <Container>
           <Col md={12}>
             <p>

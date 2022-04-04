@@ -20,9 +20,12 @@ import {
 } from "reactstrap";
 import { Link } from 'react-router-dom';
 import Footer from 'components/Footers/Footer';
+import DemoNavbar from 'components/Navbars/DemoNavbar'
+
 export default function Support() {
     return (
       <section className="support-section">
+        <DemoNavbar />
         <Container fluid>
           <Row className="d-flex justify-content-center">
             <Col md={10}>

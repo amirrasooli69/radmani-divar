@@ -13,6 +13,8 @@ import FooterBlog from 'components/Footers/FooterBlog';
 import {connect} from 'react-redux'
 import BigBlockPost from './BigBlockPost';
 import ThumbnailBlogPost from './ThumbnailBlogPost';
+import DemoNavbar from 'components/Navbars/DemoNavbar'
+
 function Weblog({ FeachBlogPosts, FeachSinglePosts, Posts, SingelPost }) {
   useEffect(() => {
     const getData = async () => {
@@ -64,6 +66,7 @@ function Weblog({ FeachBlogPosts, FeachSinglePosts, Posts, SingelPost }) {
   };
   return (
     <section className="weblog-section">
+      <DemoNavbar />
       <div className="header">
         <h2 className="divar-color">وبلاگ سایت رادمانی شو</h2>
       </div>

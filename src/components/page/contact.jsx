@@ -11,9 +11,12 @@ import {
   Card
 } from "reactstrap";
 import Footer from "components/Footers/Footer";
+import DemoNavbar from 'components/Navbars/DemoNavbar'
+
 export default function Contact() {
     return (
       <section className="section-contact-us">
+        <DemoNavbar />
         <Container>
           <Col md={12}>
             <h2>تماس با ما</h2>

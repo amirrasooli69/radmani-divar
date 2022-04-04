@@ -11,10 +11,13 @@ import {
   Card,
 } from "reactstrap";
 import NewAdvertisLink from 'components/Advertising/newAdvertis/NewAdvertisLink';
+import DemoNavbar from 'components/Navbars/DemoNavbar'
+
 
 export default function Chat() {
     return (
       <>
+      <DemoNavbar />
         <Row className="chat-section d-flex justify-content-center">
           <Col md="4">
             <Card body>

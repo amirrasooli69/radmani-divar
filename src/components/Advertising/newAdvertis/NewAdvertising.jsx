@@ -11,6 +11,8 @@ import {
 import SelectCategory from './SelectCategory';
 import GetDataForms from './GetDataForms';
 import SelectCategoryItme from './SelectCategoryItme';
+import DemoNavbar from 'components/Navbars/DemoNavbar'
+
 
 export default function NewAdvertising() {
     const [stepComponent, setstepComponent] = useState({
@@ -51,6 +53,7 @@ export default function NewAdvertising() {
     }
     return (
         <section className="new-advertising">
+            <DemoNavbar />
             {console.log("Alldata ---->>",AllDataForm)}
             <Container>
                 <Row className="d-flex justify-content-center">
