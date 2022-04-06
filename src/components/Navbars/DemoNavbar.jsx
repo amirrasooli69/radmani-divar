@@ -105,7 +105,7 @@ class DemoNavbar extends React.Component {
                   <NavItem >
                     <Link
                       className="link-itme"
-                      to="/"
+                      to="/radman/requirements/site"
 
                     >
                       رادمانی شو 

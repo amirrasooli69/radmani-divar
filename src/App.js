@@ -13,6 +13,7 @@ import Weblog from 'components/blog/Weblog';
 import Support from 'components/Support/Support';
 import Contact from 'components/page/contact';
 import New from 'components/Advertising/newAdvertis/NewAdvertising'
+import MainPage from 'views/MainPage';
 
 function App({
     fetchAdvertise,
@@ -57,8 +58,6 @@ function App({
         <>
             <BrowserRouter>
                 <Switch>
-                {/* <Redirect from='https://radmanisho.ir/radman/requirements/site/' Link='https://radmanisho.ir/' /> */}
-                <Redirect from='https://papiloo.ir/site' Link='https://papiloo.ir' />
                 <Route path='/vehicle' component={Vehicle} /> 
                 <Route path='/electronictools' component={ElectronicTools} />
                 <Route path='/chat' component={Chat} />
@@ -67,7 +66,10 @@ function App({
                 <Route path='/support' component={Support} />
                 <Route path='/contact' component={Contact} />
                 <Route path='/new' component={New} />
-                <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / >
+                <Route path='/radman/requirements/site' component={MainPage} />
+                {/* <Redirect exact from='/requirements' Link='/radman/requirements/site' /> */}
+                <Redirect from='/requirements' to='/radman/requirements/site' />
+                {/* <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / > */}
 
                 </Switch>
             </BrowserRouter>
