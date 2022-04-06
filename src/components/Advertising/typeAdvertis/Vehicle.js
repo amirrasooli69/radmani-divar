@@ -23,14 +23,14 @@ const Vehicle = () => {
     return (
         <div>
             {/* <text className='vehicleTitle'>وسیله نقلیه</text> */}
-            <div>
+            <div className='total'>
             {
                 vehicle.map((item, i) => (
-                    <div className='carContainer'>
+                    <div className='carContainer item'>
                         <img src={'https://radmanisho.ir/radman/requirements/uploads/' + item.image} alt="vehicle" className='image'/>
                         <h5>{item.title}</h5>
-                        <p>{item.description}</p>
-                        <h3>{item.price} تومان</h3>
+                        {/* <p>{item.description}</p> */}
+                        <h5>{item.price} تومان</h5>
 
 
                         {/* <button key={i} className="city-Selection-btn">{cat.name}</button> */}
