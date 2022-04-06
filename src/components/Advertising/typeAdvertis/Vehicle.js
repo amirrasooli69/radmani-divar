@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
-
+import DemoNavbar from 'components/Navbars/DemoNavbar';
+import MainSidebar from 'components/sidebar/MainSidebar';
+import FooterBlog from 'components/Footers/FooterBlog'
 import './vehicleStyle.css';
 
 const Vehicle = () => {
@@ -23,6 +25,8 @@ const Vehicle = () => {
     return (
         <div>
             {/* <text className='vehicleTitle'>وسیله نقلیه</text> */}
+            <DemoNavbar />
+            {/* <MainSidebar /> */}
             <div className='total'>
             {
                 vehicle.map((item, i) => (
@@ -39,6 +43,7 @@ const Vehicle = () => {
             }
 
             </div>
+            <FooterBlog />
             
         </div>
     );

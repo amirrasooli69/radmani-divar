@@ -57,7 +57,8 @@ function App({
         <>
             <BrowserRouter>
                 <Switch>
-                <Redirect from='https://radmanisho.ir/radman/requirements/site/' Link='https://radmanisho.ir/' />
+                {/* <Redirect from='https://radmanisho.ir/radman/requirements/site/' Link='https://radmanisho.ir/' /> */}
+                <Redirect from='https://papiloo.ir/site' Link='https://papiloo.ir' />
                 <Route path='/vehicle' component={Vehicle} /> 
                 <Route path='/electronictools' component={ElectronicTools} />
                 <Route path='/chat' component={Chat} />

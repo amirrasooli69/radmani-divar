@@ -1,6 +1,7 @@
 .total {
     display: flex;
     flex-wrap: wrap;
+    margin: 100px;
 }
 
 .carContainer{

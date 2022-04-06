@@ -16,7 +16,8 @@
     "design-react"
   ],
   "author": "Papiloo",
-  "homepage": "https://radmanisho.ir/radman/requirements/site/",
+
+  "homepage": "https://papiloo.ir/site/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,7 +28,7 @@
     "minify-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.min.css --output-style compressed",
     "map-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css --source-map true"
   },
-  "proxy": "https://radmanisho.ir/radman/requirements/site/",
+  "proxy": "https://papiloo.ir/site",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -69,4 +70,6 @@
     "redux-devtools-extension": "^2.13.8",
     "typescript": "3.4.5"
   }
+
 }
+  
