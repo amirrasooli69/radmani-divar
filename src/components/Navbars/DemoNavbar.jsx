@@ -60,7 +60,7 @@ class DemoNavbar extends React.Component {
             id="navbar-main"
           >
             <div className="container-fluid" >
-              <NavbarBrand className="" to="/" tag={Link}>
+              <NavbarBrand className="" to="/radman/requirements/site" tag={Link}>
                 <img
                   alt="..."
                   src={require("assets/img/brand/logo-divar.png")}
