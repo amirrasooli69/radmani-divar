@@ -14,6 +14,7 @@ import Support from 'components/Support/Support';
 import Contact from 'components/page/contact';
 import New from 'components/Advertising/newAdvertis/NewAdvertising'
 import MainPage from 'views/MainPage';
+import SingelAdvertis from './components/Advertising/view/SingelAdvertis'
 
 function App({
     fetchAdvertise,
@@ -58,18 +59,19 @@ function App({
         <>
             <BrowserRouter>
                 <Switch>
-                <Route path='/vehicle' component={Vehicle} /> 
-                <Route path='/electronictools' component={ElectronicTools} />
-                <Route path='/chat' component={Chat} />
-                <Route path='/about' component={About} />
-                <Route path='/blog' component={Weblog} />
-                <Route path='/support' component={Support} />
-                <Route path='/contact' component={Contact} />
-                <Route path='/new' component={New} />
-                <Route path='/radman/requirements/site' component={MainPage} />
-                {/* <Redirect exact from='/requirements' Link='/radman/requirements/site' /> */}
-                <Redirect from='/requirements' to='/radman/requirements/site' />
-                {/* <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / > */}
+                    <Route path='/view/:name/:id' component={SingelAdvertis}/>
+                    <Route path='/vehicle' component={Vehicle} /> 
+                    <Route path='/electronictools' component={ElectronicTools} />
+                    <Route path='/chat' component={Chat} />
+                    <Route path='/about' component={About} />
+                    <Route path='/blog' component={Weblog} />
+                    <Route path='/support' component={Support} />
+                    <Route path='/contact' component={Contact} />
+                    <Route path='/new' component={New} />
+                    <Route path='/radman/requirements/site' component={MainPage} />
+                    {/* <Redirect exact from='/requirements' Link='/radman/requirements/site' /> */}
+                    <Redirect from='/requirements' to='/radman/requirements/site' />
+                    {/* <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / > */}
 
                 </Switch>
             </BrowserRouter>

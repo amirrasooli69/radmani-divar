@@ -23,6 +23,8 @@ function SingelAdvertis(props) {
     
     props.getSingledata(props.match.params.id)
   }, [])
+
+
   const [Modal, setModal] = useState(false)
   const toggle = () => {
     // setModal(!(Modal))
@@ -85,6 +87,7 @@ function SingelAdvertis(props) {
                 <h1 className="Advertis-content-Wrapper__title">
                   
                   {props.singleWidgets.header != undefined ? props.singleWidgets.header.title : ''}
+                  {/* {title != undefined ? title : ''} */}
                 </h1>
                 <div className="Advertis-content-Wrapper__publish-time">
                   {props.singleWidgets.header != undefined ? props.singleWidgets.header.date : ''}
@@ -134,6 +137,7 @@ function SingelAdvertis(props) {
               <ShareBox link={props.token}/>
             </Col>
           </Row>
+
         </Container>
       </section>
     );
