@@ -5,6 +5,8 @@ import axios from 'axios'
 import Wrapper from "components/wrapper";
 import NotFound from "components/Error/NotFound";
 import Axios from 'axios';
+import ProductContextProvider from './context/ProductContextProvider';
+
 import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
 import ElectronicTools from 'components/Advertising/typeAdvertis/ElectronicTools';
 import Chat from 'components/chatComponent/Chat';
@@ -15,6 +17,7 @@ import Contact from 'components/page/contact';
 import New from 'components/Advertising/newAdvertis/NewAdvertising'
 import MainPage from 'views/MainPage';
 import SingelAdvertis from './components/Advertising/view/SingelAdvertis'
+import AllProducts from 'components/Advertising/typeAdvertis/AllProducts';
 
 function App({
     fetchAdvertise,
@@ -58,22 +61,24 @@ function App({
     return (
         <>
             <BrowserRouter>
-                <Switch>
-                    <Route path='/view/:name/:id' component={SingelAdvertis}/>
-                    <Route path='/vehicle' component={Vehicle} /> 
-                    <Route path='/electronictools' component={ElectronicTools} />
-                    <Route path='/chat' component={Chat} />
-                    <Route path='/about' component={About} />
-                    <Route path='/blog' component={Weblog} />
-                    <Route path='/support' component={Support} />
-                    <Route path='/contact' component={Contact} />
-                    <Route path='/new' component={New} />
-                    <Route path='/radman/requirements/site' component={MainPage} />
-                    {/* <Redirect exact from='/requirements' Link='/radman/requirements/site' /> */}
-                    <Redirect from='/requirements' to='/radman/requirements/site' />
-                    {/* <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / > */}
+                <ProductContextProvider>
+                    <Switch>
+                        <Route path='/view/:name/:id' component={SingelAdvertis}/>
+                        <Route path='/vehicle' component={Vehicle} /> 
+                        <Route path='/electronictools' component={ElectronicTools} />
+                        <Route path='/chat' component={Chat} />
+                        <Route path='/about' component={About} />
+                        <Route path='/blog' component={Weblog} />
+                        <Route path='/support' component={Support} />
+                        <Route path='/contact' component={Contact} />
+                        <Route path='/new' component={New} />
+                        <Route path='/radman/requirements/site' component={MainPage} />
+                        {/* <Redirect exact from='/requirements' Link='/radman/requirements/site' /> */}
+                        <Redirect from='/requirements' to='/radman/requirements/site' />
+                        {/* <Route exact path = "/" render = {(props) => <Wrapper {...props}/>} / > */}
 
-                </Switch>
+                    </Switch>
+                </ProductContextProvider>
             </BrowserRouter>
         </>
     )
