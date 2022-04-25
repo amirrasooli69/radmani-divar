@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 import { connect } from 'react-redux'
 import Vehicle from 'components/Advertising/typeAdvertis/Vehicle';
+import AllProducts from 'components/Advertising/typeAdvertis/AllProducts';
 
 function Filter({ suggestion ,Categoryes}) {
   const RenderFerterTag = ()=>{
@@ -48,7 +49,8 @@ function Filter({ suggestion ,Categoryes}) {
           <Col className="col-md-12 filter-tag-search">
             {/* {RenderFerterTag()} */}
           </Col>
-            <Vehicle />
+          <AllProducts />
+            {/* <Vehicle /> */}
           <div className="description-filter-search">
             <span>
             رادمانی شو سمنان - نیازمندی‌ های رایگان، آگهی‌های خرید، فروش نو و دست
