@@ -8,18 +8,23 @@ import DemoNavbar from 'components/Navbars/DemoNavbar';
 //Contexts
 import { ProductsContext } from 'context/ProductContextProvider';
 
+//Style
+import styles from './AllProducts.module.css'
+
 const AllProducts = () => {
 
     const products = useContext(ProductsContext);
     return (
         <div>
             <DemoNavbar />
-            {
-                products.map(product => <Product 
-                                        key={product.id}
-                                        data={product}
-                                        />)
-            }
+            <div className={styles.container}>
+                {
+                    products.map(product => <Product 
+                                            key={product.id}
+                                            data={product}
+                                            />)
+                }
+            </div>
         </div>
     );
 };
