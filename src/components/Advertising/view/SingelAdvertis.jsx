@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect, useContext} from 'react'
 import {
   Container,
   Row,
@@ -18,12 +18,27 @@ import ShareBox from './ShareBox';
 import AdvertisingActions from './AdvertisingActions';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
-function SingelAdvertis(props) {
-  useEffect(() => {
-    
-    props.getSingledata(props.match.params.id)
-  }, [])
 
+//Contexts
+import { ProductsContext } from 'context/ProductContextProvider';
+
+function SingelAdvertis(props) {
+
+  // const {image, title, description, price, id} = props.data;
+  // // console.log(id, title, description, price );
+  const id = props.match.params.id
+  // useEffect(() => {
+    
+  //   props.getSingledata(props.match.params.id)
+    
+  // }, [])
+
+  // const id= props.id;
+
+  const data = useContext(ProductsContext);
+
+  // data = data.filter(item => item.id === id)
+  // console.log("AAAAAAaaaaaAAAA  ", data[1].description);
 
   const [Modal, setModal] = useState(false)
   const toggle = () => {
@@ -133,6 +148,7 @@ function SingelAdvertis(props) {
               </Row>
             </Col>
             <Col md={6}>
+              {/* <ProductSilder img={data[1].image} /> */}
               <ProductSilder img={props.singleWidgets.images}/>
               <ShareBox link={props.token}/>
             </Col>

@@ -13,7 +13,7 @@ export default function ShareBox({link}) {
     const handleShow = () => setShow(true);
 
 
-    const shortLink =`https://divar.ir/v/${link}`;
+    const shortLink =`https://radmanisho.ir/v/${link}`;
     const copyToClipboard =()=>{
         let copyText = document.getElementById("ShortLinkInput");
         copyText.select();

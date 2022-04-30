@@ -1,18 +1,12 @@
-.total {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 100px;
-}
 
-.carContainer{
+
+.productContainer{
     border: solid 3px green;
     border-radius: 5px;
     margin: 5px;
-    width: 200px;
-    height: 250px;
-    display: grid;
+    width: 220px;
+    height: 350px;
     flex-wrap: wrap;
-    
     
 }
 .vehicleTitle{
@@ -21,13 +15,21 @@
     text-align: center;
     font-size: x-large;
 }
-.carContainer img,h5,p,h3{
-    margin: 10px;    
+.productContainer img,h5,p,h3,h6{
+    margin: 10px 5px;    
     display: flex;
     display: flex;
+    
 
 }
 .image{
-    width: 100px;
-    height: 100px;
+    width: 205px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.productContainer span:hover {
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
 }
